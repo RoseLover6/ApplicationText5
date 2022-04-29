@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText mUserNumber,mPwd;
-    private Button login,register;
+    private EditText mUserNumber, mPwd;
+    private Button login, register;
     private static final String LOGIN_NUM = "17641241979";
     private static final String LOGIN_PWD = "521314";
 
@@ -27,16 +27,16 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mUserNumber.getText().toString().equals(LOGIN_NUM)&&mPwd.getText().toString()
-                        .equals(LOGIN_PWD)){
-                    Toast.makeText(MainActivity.this,"登录成功！",Toast.LENGTH_SHORT).show();
+                if (mUserNumber.getText().toString().equals(LOGIN_NUM) && mPwd.getText().toString()
+                        .equals(LOGIN_PWD)) {
+                    Toast.makeText(MainActivity.this, "登录成功！", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent();
-                    intent.setClass(MainActivity.this,MyToolAcyivity.class);
-                    intent.putExtra("userNumber",mUserNumber.getText().toString());
-                    intent.putExtra("pwd",mPwd.getText().toString());
+                    intent.setClass(MainActivity.this, MyToolAcyivity.class);
+                    intent.putExtra("userNumber", mUserNumber.getText().toString());
+                    intent.putExtra("pwd", mPwd.getText().toString());
                     startActivity(intent);
-                }else {
-                    Toast.makeText(MainActivity.this,"登录失败，账号或密码错误！",
+                } else {
+                    Toast.makeText(MainActivity.this, "登录失败，账号或密码错误！",
                             Toast.LENGTH_SHORT).show();
                 }
             }
